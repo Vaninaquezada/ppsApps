@@ -1,0 +1,38 @@
+<ion-header [translucent]="true" [hidden]="scanActive">
+  <ion-toolbar>
+    <ion-title> Carga de crédito</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" (click)="singOut()">
+        <ion-icon name="log-out" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [style.--background]="scanActive ? 'rgba(0, 0, 0, 0)' :'rgba(72, 128, 34, 0.9)'">
+
+  <ion-card class="total" [hidden]="scanActive">
+    <ion-item class="totalito">
+      $ {{this.c.total}}
+    </ion-item>
+  </ion-card>
+
+
+
+
+
+
+
+  <ion-button expand="block" class="qt" [hidden]="scanActive" (click)="startScanner()">
+    <ion-icon name="qr-code-outline"></ion-icon>
+    <ion-label> Escanear</ion-label>
+  </ion-button>
+
+  <ion-button expand="block" class="tacho" [hidden]="scanActive" (click)="borrarCredito()">
+    <ion-icon name="trash-outline"></ion-icon>
+  </ion-button>
+
+
+  <ion-button class="scanner-buttons" (click)="stopScanner()" [hidden]="!scanActive">Detener escaneo</ion-button>
+  <div class="scan-box" [hidden]="!scanActive"></div>
+</ion-content>

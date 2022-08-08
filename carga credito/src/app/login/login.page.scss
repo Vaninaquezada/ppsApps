@@ -1,0 +1,83 @@
+.inputStilo {
+    border-radius: 10px;
+    background-color: rgba(8, 31, 3, 0.753);
+    text-decoration: none;
+    z-index: -1;
+}
+
+.userButton {
+    align-items: center;
+    justify-content: center;
+    --background: url("/../assets/img/button.png") 0 0/100% 100%;
+    width: 90px;
+    border-radius: 90%;
+    outline: none;
+    button:focus {
+        outline: 0;
+    }
+    outline: none;
+    box-shadow: none;
+}
+ion-toolbar {
+    --ion-background-color: #2b7b0b;
+
+    --ion-toolbar-color: #ffffff;
+}
+
+.toastcss {
+    --background: #ffdb22;
+    --color: #ff3f22;
+    --border-style: solid;
+    --border-width: 5px;
+    --border-color: #ff3f22;
+    outline: none;
+    button:focus {
+        outline: 0;
+    }
+}
+form {
+    margin-top: 5%;
+    opacity: 1;
+    --ion-item-color: white;
+}
+ion-label {
+    padding-left: 3px;
+    padding-bottom: 3px;
+    align-self: auto;
+    z-index: 1;
+}
+
+.modalSelect {
+    --ion-item-color: white;
+    border-color: #2a740d;
+}
+
+ion-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+    background-size: 20px;
+    --background: rgba(168, 206, 64, 0.9);
+}
+.icono {
+    position: relative;
+    margin: auto;
+    max-width: 40vw;
+    max-height: 20vh;
+}
+ion-item {
+    --background: transparent;
+    margin: 5px;
+}
+.card {
+    background-color: rgba(72, 128, 34, 0.9);
+    --background: rgba(72, 128, 34, 0.9);
+}
+.fancy-button {
+    --background: #43b914;
+    margin-top: 40px;
+    font-size: 30px;
+    height: 70px;
+}
