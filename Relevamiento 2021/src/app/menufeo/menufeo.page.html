@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-title class="ion-float-left">
+      Menú
+    </ion-title>
+    <ion-item class="ion-float-right" (click)="singOut()">
+      <ion-icon name="enter-outline"></ion-icon>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container">
+    <div class="botonLindo" (click)="onClickListaLindo()">
+      <h2>Lista fotos feas</h2>
+    </div>
+    <div class="botonFeo" (click)="onClickMisListaLindo()">
+      <h2>Mis fotos feas</h2>
+    </div>
+    <div class="botonGrafico" (click)="onClickGraficoLindo()">
+      <h2>Gráfico</h2>
+    </div>
+  </div>
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="takePicture()">
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

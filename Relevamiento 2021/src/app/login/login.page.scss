@@ -1,0 +1,108 @@
+:root {
+    --ion-color-naranja: #ff7a14;
+    --ion-color-naranja-rgb: 255, 122, 20;
+    --ion-color-naranja-contrast: #000000;
+    --ion-color-naranja-contrast-rgb: 0, 0, 0;
+    --ion-color-naranja-shade: #e06b12;
+    --ion-color-naranja-tint: #ff872c;
+}
+
+.ion-color-naranja {
+    --ion-color-base: var(--ion-color-naranja);
+    --ion-color-base-rgb: var(--ion-color-naranja-rgb);
+    --ion-color-contrast: var(--ion-color-naranja-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-naranja-contrast-rgb);
+    --ion-color-shade: var(--ion-color-naranja-shade);
+    --ion-color-tint: var(--ion-color-naranja-tint);
+}
+ion-header {
+    --ion-background-color: rgb(255, 218, 107);
+}
+ion-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    --background: url("/../assets/img/fondo.png") 0 0/50% 50% repeat;
+    /* --ion-background-color: #f0e36e;*/
+    //background: url("/assets/img/fondo.png") ;
+    --ion-background-color: rgb(255, 218, 107);
+    --ion-background-color: linear-gradient(0deg, rgb(254, 209, 73) 0%, rgb(205, 208, 114) 100%);
+    ////--ion-background: url("/../assets/img/fondo.png") repeat;
+}
+
+ion-img {
+    position: relative;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    align-self: center;
+    max-width: 50vw;
+    max-height: 50vw;
+}
+ion-button.ingresar {
+    position: relative;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+}
+ion-item-divider.login {
+    margin-top: 10%;
+    --border-color: #3ebffb;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.in {
+    color: #e26600;
+    border-radius: 10%;
+}
+
+ion-toolbar {
+    --ion-background-color: #ffa733;
+    --ion-toolbar-color: #ffffff;
+}
+ion-icon {
+    --ion-color-base: #3ebffb;
+    --ion-background-color: #ffa733;
+    color: #002a3e;
+}
+ion-fab-button {
+    --ion-color-base: #3ebffb;
+    --ion-background-color: #ffa733;
+    color: #002a3e;
+}
+ion-button.botones {
+    margin: 10px;
+    width: 80%;
+}
+ion-input {
+    padding: 5px;
+
+    position: relative;
+}
+
+
+.errors {
+    font-size: small;
+    color: #fff;
+    background: var(--ion-color-danger);
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.alertDanger {
+    background-color: white;
+    color: red;
+    button {
+        color: red;
+    }
+}

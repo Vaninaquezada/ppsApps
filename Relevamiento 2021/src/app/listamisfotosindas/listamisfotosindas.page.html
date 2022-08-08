@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-float-left">Mis Fotos Lindas</ion-title>
+    <div class="ion-float-right" (click)="singOut()">
+      <ion-icon name="enter-outline"></ion-icon>
+    </div>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="cardContent" *ngFor="let foto of imagenes">
+    <ion-card class="card" *ngIf="foto.usuario == usuario && foto.tipo == 'linda'">
+      <ion-card-content>
+
+        <ion-img class="card-img" [src]="foto.imagen"></ion-img>
+        <div class="card-content">
+          <ion-label class="card-text">Foto subida por: {{foto.usuario}}</ion-label>
+          <br>
+          <ion-label class="card-text">Fecha: {{foto.fecha.toMillis() | date:'dd/MM/yyyy hh:mm a'}}</ion-label>
+          <br>
+          <ion-label class="card-text">Votos: {{foto.votacion.length}}</ion-label>
+
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

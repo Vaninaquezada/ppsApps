@@ -1,0 +1,17 @@
+{
+  "appId": "io.ionic.chat",
+  "appName": "chat",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "splashImmersive": true,
+      "launchShowDuration": 1500,
+      "androidSplashResourceName": "splash",
+      "launchAutoHide": true,
+      "backgroundColor": "#01131b"
+    }
+  },
+  "cordova": {}
+}

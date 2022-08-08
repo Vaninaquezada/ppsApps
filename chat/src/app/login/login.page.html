@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ingreso</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item class="icono" lines="none">
+    <ion-img class="icon" src="assets/img/icon.png"></ion-img>
+
+  </ion-item>
+  <ion-card class="card">
+    <ion-card-header>
+
+    </ion-card-header>
+    <ion-card-content>
+
+
+      <form>
+        <ion-item lines="full">
+          <ion-label class="label" position="floating"><span>Correo electrónico</span></ion-label>
+          <ion-input type="text" #email required value={{mail}}> </ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label class="label" position="floating"><span>Contrseña</span></ion-label>
+          <ion-input type="password" value={{pass}} #password required> </ion-input>
+        </ion-item>
+        <ion-row>
+          <ion-col>
+            <ion-button type="submit" (click)="onLogin(email, password)" class="fancy-button" shape="round"
+              expand="block">
+              Ingresar</ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+    </ion-card-content>
+  </ion-card>
+  <ion-row>
+    <ion-col>
+
+      <ion-button class="userButton" size="large" value="admin" (click)="onClick('admin')"></ion-button>
+
+    </ion-col>
+    <ion-col>
+
+
+      <ion-button class="userButton" size="large" value="invitado" (click)="onClick('invitado')"></ion-button>
+
+    </ion-col>
+    <ion-col>
+
+
+      <ion-button class="userButton" size="large" value="anonimo" (click)="onClick('anonimo')"></ion-button>
+
+    </ion-col>
+    <ion-col>
+
+      <ion-button class="userButton" size="large" value="tester" (click)="onClick('tester')"></ion-button>
+    </ion-col>
+    <ion-col>
+
+
+      <ion-button class="userButton" size="large" value="usuario" (click)="onClick('usuario')"></ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

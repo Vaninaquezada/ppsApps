@@ -1,0 +1,41 @@
+.message-input {
+    width: 100%;
+    border: 1px solid var(--ion-color-medium);
+    border-radius: 6px;
+    background: rgb(255, 255, 255);
+    resize: none;
+    margin-top: 0px;
+    --padding-start: 8px;
+}
+
+ion-toolbar {
+    --ion-background-color: #01b963;
+    background-color: #01b963;
+    --ion-toolbar-color: #ffffff;
+}
+ion-content {
+    --ion-background-color: #b3e9d0;
+    background-color: #afffda;
+}
+.message {
+    padding: 10px !important;
+    border-radius: 10px !important;
+    margin-bottom: 4px !important;
+    white-space: pre-wrap;
+}
+
+.my-message {
+    background: #8fc618;
+    color: #fff;
+}
+
+.other-message {
+    background: #01b963;
+    color: #fff;
+}
+
+.time {
+    color: #ffffff;
+    float: right;
+    font-size: small;
+}

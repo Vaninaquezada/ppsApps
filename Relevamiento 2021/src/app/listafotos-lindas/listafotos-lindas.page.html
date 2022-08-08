@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-title class="ion-float-left">Lista Fotos Lindas</ion-title>
+    <div class="ion-float-right" (click)="singOut()">
+      <ion-icon name="enter-outline"></ion-icon>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let foto of imagenes">
+    <ion-card class="card" *ngIf="foto.tipo == 'linda'">
+      <ion-card-content>
+        <ion-img class="card-img" [src]="foto.imagen"></ion-img>
+        <div class="card-content">
+          <ion-label class="card-text">Foto subida por: {{foto.usuario}}</ion-label>
+          <br>
+          <ion-label class="card-text">Fecha: {{foto.fecha.toMillis() | date:'dd/MM/yyyy hh:mm a'}}</ion-label>
+          <br>
+          <ion-label class="card-text">Votos: {{foto.votacion.length}}</ion-label>
+
+
+          <button *ngIf="!foto.votaste" class="card-btn" (click)="votar(foto.id)">Votar
+            <ion-img class="dedo" lines="none" src="assets/img/dedoPositivo.png"></ion-img>
+          </button>
+          <br>
+
+          <ion-label *ngIf="foto.votaste" class="card-text">Ya votaste por esta foto</ion-label>
+
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

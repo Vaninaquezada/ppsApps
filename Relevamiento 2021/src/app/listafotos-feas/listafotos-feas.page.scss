@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.grid {
+    display: grid;
+    width: 114em;
+    grid-gap: 6rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    align-items: start;
+}
+
+.grid-item {
+    background-color: #fff;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.grid-item:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+}
+
+.card {
+    border-style: solid;
+    border-width: 5px;
+    border-color: #3363ff;
+    margin-bottom: 20px;
+}
+.card-img {
+    display: block;
+    width: 90%;
+    height: 20rem;
+    object-fit: cover;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.card-content {
+    padding: 3rem;
+    border: #3363ff;
+}
+.cardContent {
+    margin-top: 10px;
+}
+.card-header {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #0d0d0d;
+    margin-bottom: 1.5rem;
+}
+
+.card-text {
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.7;
+    color: #3d3d3d;
+    margin-bottom: 2.5rem;
+}
+
+.card-btn {
+    display: block;
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+    color: #466ef1;
+    background-color: #d8e0fd;
+    border: none;
+    border-radius: 0.4rem;
+    transition: 0.2s;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+}
+
+.card-btn span {
+    margin-left: 1rem;
+    transition: 0.2s;
+}
+
+.card-btn:hover,
+.card-btn:active {
+    background-color: #c2cffc;
+}
+
+.card-btn:hover span,
+.card-btn:active span {
+    margin-left: 1.5rem;
+}
+
+@media only screen and (max-width: 60em) {
+    body {
+        padding: 3rem;
+    }
+
+    .grid {
+        grid-gap: 3rem;
+    }
+}
+
+ion-content {
+    --background: url("/../assets/img/fondo.png") 0 0/50% 50% repeat;
+
+    --ion-background-color: rgb(128, 208, 255);
+    // --ion-background-color: linear-gradient(0deg, rgba(255,218,107,1) 0%, rgba(234,237,143,1) 100%);
+}
+ion-toolbar {
+    --ion-background-color: hsl(34, 100%, 60%);
+    display: flex;
+    align-items: flex-start;
+    --ion-toolbar-color: #ffffff;
+}
+.disable {
+    color: #0d0d0d;
+}
+
+.dedo {
+    width: 50px;
+    margin: auto;
+}
+ion-icon {
+    font-size: 30px;
+}
+ion-title {
+    margin-left: 20px;
+}

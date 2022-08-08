@@ -1,0 +1,134 @@
+ion-content {
+  display: flex;
+
+  flex-direction: column;
+  --background: url("/../assets/img/fondo.png") 0 0/50% 50% repeat;
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+ion-toolbar {
+  --ion-background-color: hsl(34, 100%, 60%);
+  background-color: hsl(34, 100%, 60%);
+  --ion-toolbar-color: #ffffff;
+}
+#container a {
+  text-decoration: none;
+}
+
+ion-content ion-toolbar {
+  --background: translucent;
+}
+h2 {
+  margin: auto;
+  font-size: 50px;
+  color: #342d99;
+  font-family: "Modak", cursive;
+  text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff,
+    -1px 1px 0 #fff;
+}
+/*.botonLindo {
+  border: 20px solid #bdbdbd;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: lightblue;
+  background: url("/../assets/img/fondoLindo.png") no-repeat;
+  background-size: 200px;
+}
+.botonFeo {
+  border: 20px solid #bdbdbd;
+  align-self: center;
+  width: 250px;
+  margin-right: 50%;
+  height: 250px;
+  border-radius: 80%;
+  color: #080170;
+
+  background: url("/../assets/img/fondoFeo.png") no-repeat;
+  text-align: center;
+  background-size: 200px;
+  
+}*/
+
+.botonLindo {
+  border: 10px solid #bdbdbd;
+  background-color: #3ebffb;
+  width: 90%;
+  height: 240px;
+  margin-top: 10%;
+  margin-left: 5%;
+  text-align: center;
+  //background: url("/../assets/img/fondoLindo.png") 0 0/100% 100% no-repeat;
+}
+.botonFeo {
+  border: 10px solid #bdbdbd;
+  width: 90%;
+  height: 240px;
+  margin: auto;
+  margin-top: 30px;
+  background-color: #3efba3;
+  //background: url("/../assets/img/fondoFeo3.png") 0 0/90% 90% no-repeat;
+  text-align: center;
+}
+
+.fondoLindo,
+.fondoFeo {
+  width: 40%;
+  margin: auto;
+}
+
+///**//
+#custom-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100000;
+  width: 100%;
+  background-color: #002a3e;
+}
+
+.flb {
+  background-color: #3ebffb;
+  height: 100%;
+  width: 100%;
+  animation: pulse 1s linear forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.Aligner-item {
+  max-width: 50%;
+}
+.Aligner-item--top {
+  align-self: flex-start;
+}
+.Aligner-item--bottom {
+  align-self: flex-end;
+}
+#custom-overlay img {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  height: auto;
+  animation: animation 3100ms linear infinite both;
+  animation-delay: 1s;
+}
+ion-icon {
+  font-size: 30px;
+  color: #ffffff;
+}

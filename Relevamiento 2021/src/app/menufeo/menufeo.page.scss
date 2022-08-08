@@ -1,0 +1,62 @@
+ion-content {
+    --background: url("/../assets/img/fondo.png") 0 0/50% 50% repeat;
+
+    --ion-background-color: rgb(255, 218, 107);
+    // --ion-background-color: linear-gradient(0deg, rgba(255,218,107,1) 0%, rgba(234,237,143,1) 100%);
+}
+
+ion-toolbar {
+    --ion-background-color: hsl(34, 100%, 60%);
+    display: flex;
+    align-items: flex-start;
+    --ion-toolbar-color: #ffffff;
+}
+
+ion-icon {
+    font-size: 30px;
+}
+ion-title {
+    margin-left: 20px;
+}
+
+.botonLindo {
+    border: 10px solid #bdbdbd;
+    background-color: #3ebffb;
+    width: 90%;
+    height: 150px;
+    margin-top: 10%;
+    margin-left: 5%;
+    text-align: center;
+}
+.botonFeo {
+    border: 10px solid #bdbdbd;
+    width: 90%;
+    height: 150px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #3efba3;
+    text-align: center;
+}
+.botonGrafico {
+    border: 10px solid #bdbdbd;
+    width: 90%;
+    height: 150px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: #dffb3e;
+    text-align: center;
+}
+h2 {
+    margin-top: 30px;
+
+    text-align: center;
+    font-size: 40px;
+    color: #342d99;
+    font-family: "Modak", cursive;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff,
+        1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+ion-icon {
+    font-size: 30px;
+    color: #ffffff;
+}

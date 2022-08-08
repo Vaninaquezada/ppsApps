@@ -1,0 +1,24 @@
+ion-content {
+    --background: url("/../assets/img/fondo.png") 0 0/50% 50% repeat;
+
+    --ion-background-color: rgb(128, 208, 255);
+    // --ion-background-color: linear-gradient(0deg, rgba(255,218,107,1) 0%, rgba(234,237,143,1) 100%);
+}
+ion-toolbar {
+    --ion-background-color: hsl(34, 100%, 60%);
+    display: flex;
+    align-items: flex-start;
+    --ion-toolbar-color: #ffffff;
+}
+ion-img {
+    max-width: 70%;
+    margin-left: 15%;
+    border-color: rgb(5, 66, 82);
+    border-width: 2px;
+}
+.canvas-responsive {
+    background-color: #ffffff;
+}
+ion-icon {
+    font-size: 30px;
+}

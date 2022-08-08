@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-float-left">Grafico Fotos Lindas</ion-title>
+    <div class="ion-float-right" (click)="singOut()">
+      <ion-icon name="enter-outline"></ion-icon>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class='canvas-responsive'>
+
+    <canvas #valueBarsCanvas></canvas>
+  </div>
+  <ion-img [hidden]="hay" [src]="imagen"></ion-img>
+</ion-content>

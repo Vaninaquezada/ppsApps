@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ingreso</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+
+  <ion-img class="icono" lines="none" src="assets/img/icon.png"></ion-img>
+
+
+  <form [formGroup]="credentialForm">
+    <ion-item class="in" lines="none">
+      <ion-label position="floating">Correo electrónico</ion-label>
+      <ion-input type="email" #email required value={{mail}} formControlName="email" autofocus="true" clearInput="true">
+      </ion-input>
+    </ion-item>
+    <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
+      <span *ngIf="email.errors?.required">Email is required</span>
+      <span *ngIf="email.errors?.email">Email is invalid</span>
+    </div>
+    <ion-item class="in" lines="none">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" #password value={{pass}} required formControlName="password" clearInput="true">
+      </ion-input>
+    </ion-item>
+    <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
+      <span *ngIf="password.errors?.required">Password is required</span>
+      <span *ngIf="password.errors?.minlength">Password needs to be 6 characters</span>
+    </div>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" class="ingresar" (click)="onLogin(email, password)" color="warning" expand="block">
+          Ingresar</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+  <ion-fab horizontal="start" vertical="bottom" slot="fixed">
+    <ion-fab-button color="warning">
+      <ion-icon md="caret-up" color="light"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button color="light" (click)="onClick('admin')">
+        <ion-icon name="person" color="dark"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light" (click)="onClick('invitado')">
+        <ion-icon name="person" color="medium"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light" (click)="onClick('anonimo')">
+        <ion-icon name="person" color="tertiary"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light" (click)="onClick('tester')">
+        <ion-icon name="person" color="success"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light" (click)="onClick('usuario')">
+        <ion-icon name="person" color="danger"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Chat</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" (click)="signOut()">
+        <ion-icon name="log-out" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <div class="botonLindo" (click)="onClick4A()">
+      <h2>PPS-4A</h2>
+      <ion-img class="icono" src="assets/img/chat1.png"></ion-img>
+
+    </div>
+    <div class="botonFeo" (click)="onClick4B()">
+      <h2>PPS-4B</h2>
+      <ion-img class="icono" src="assets/img/chat2.png"></ion-img>
+
+    </div>
+  </div>
+</ion-content>
