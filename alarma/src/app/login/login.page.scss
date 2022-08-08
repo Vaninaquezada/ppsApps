@@ -1,0 +1,211 @@
+.h2 {
+    text-align: right;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 30px;
+}
+ion-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --ion-background-color: #000000;
+    flex-direction: column;
+    --ion-item-color: white;
+}
+ion-img {
+    position: relative;
+    margin-left: 35%;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    align-self: center;
+}
+.ingresar {
+    position: relative;
+    border: none;
+    --ion-background-color: #8b0b0b;
+    // padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+ion-img {
+    margin-top: 10%;
+    margin-bottom: 20%;
+}
+ion-input {
+    margin: 5px;
+    position: relative;
+    --ion-item-color: white;
+    color: #ffffff;
+    --ion-text-color: white;
+}
+
+ion-toolbar {
+    --ion-background-color: #a30404;
+
+    --ion-toolbar-color: #ffffff;
+}
+
+ion-title {
+    --ion-title-color: white;
+}
+.img {
+    max-width: 30%;
+    height: 50%;
+}
+
+ion-label {
+    --ion-item-color: white;
+    color: #ffffff;
+    --ion-text-color: white;
+}
+ion-label:active {
+    --ion-item-color: white;
+}
+ion-select {
+    --ion-select-background-color: #000000;
+    --background: #000000;
+    --ion-text-color: white;
+    --ion-item-color: white;
+    color: red;
+}
+
+a {
+    display: inline-block;
+    padding: 15px 30px;
+    color: #f32121;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.5s;
+    border-color: #8b0b0b;
+    border-width: 0.5px;
+    --webkit-box-reflect: below 1px linear-gradient(transparent, #f32121);
+}
+ion-col {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+button {
+    background-color: #060708;
+    border-width: 0.5px;
+    margin: 20px;
+}
+
+a:nth-child(1) {
+    filter: hue-rotate(290deg);
+}
+a:nth-child(3) {
+    filter: hue-rotate(110deg);
+}
+
+a:hover,
+a:active {
+    color: #842525;
+    background: #f32121;
+    box-shadow: 0 0 5px #f32121, 0 0 25px #f32121, 0 0 50px #f32121, 0 0 200px #f32121;
+}
+a span {
+    position: absolute;
+    display: block;
+}
+a span:nth-child(1) {
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff0000);
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+//a:hover span:nth-child(1) {
+//   left: 100%;
+//   transition: 1s;
+//}
+a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #f32121);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+//a:hover span:nth-child(3) {
+//   right: 100%;
+//    transition: 1s;
+//}
+
+a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #f32121);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+//a:hover span:nth-child(2) {
+//   top: 100%;
+//   transition: 1s;
+//   transition-delay: 0.25s;
+//}
+a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #f32121);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+//a:hover span:nth-child(4) {
+//   bottom: 100%;
+//   transition: 1s;
+///   transition-delay: 0.75s;
+//}
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+}

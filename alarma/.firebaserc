@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "loginapp-7650a": {
+      "hosting": {
+        "app": [
+          "loginapp-7650a"
+        ]
+      }
+    }
+  }
+}

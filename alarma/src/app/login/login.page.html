@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ingreso</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-img class="img" src="assets/img/icon.png"></ion-img>
+  </ion-item>
+  <form [formGroup]="credentialForm">
+    <ion-item stacked>
+      <ion-label position="floating" color="light">&nbsp; &nbsp; Correo electrónico</ion-label>
+      <ion-input placeholder="Escriba su correo electrónico" type="email" #email value={{mail}} required
+        formControlName="email"> &nbsp;
+      </ion-input>
+    </ion-item>                             
+    <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
+      <span *ngIf="email.errors?.required">Email is required</span>
+      <span *ngIf="email.errors?.email">Email is invalid</span>
+    </div>
+    <ion-item stacked>
+      <ion-label position="floating" color="light">&nbsp; &nbsp; Contraseña</ion-label>
+      <ion-input formControlName="password" type="password" placeholder="Escriba su contraseña" #password value={{pass}}
+        required>&nbsp; &nbsp;</ion-input>
+    </ion-item>
+    <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
+      <span *ngIf="password.errors?.required">Password is required</span>
+      <span *ngIf="password.errors?.minlength">Password needs to be 6 characters</span>
+    </div>
+    <ion-row>
+      <ion-col>
+        <!-- <ion-button type="submit" (click)="onLogin(email, password)" class="ingresar" color="danger" size="large"
+          expand="full">Ingresar</ion-button>-->
+        <button type="submit" (click)="onLogin(email, password)" ize="large" expand="full">
+          <a><span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Ingresar
+          </a></button>
+      </ion-col>
+    </ion-row>
+  </form>
+  <ion-row>
+
+    <ion-col class="botones">
+
+      <ion-button color="danger" size="small" value="admin" (click)="onClick('admin')">admin</ion-button>
+      <ion-button color="danger" size="small" value="invitado" (click)="onClick('invitado')">invitado</ion-button>
+      <ion-button color="danger" size="small" value="anonimo" (click)="onClick('anonimo')">anonimo</ion-button>
+      <ion-button color="danger" size="small" value="tester" (click)="onClick('tester')">tester</ion-button>
+      <ion-button color="danger" size="small" value="usuario" (click)="onClick('usuario')">usuario</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>
