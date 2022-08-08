@@ -1,0 +1,82 @@
+.inputStilo {
+    border-radius: 10px;
+    background-color: #560bac;
+    text-decoration: none;
+    z-index: -1;
+}
+
+.userButton {
+    align-items: center;
+    justify-content: center;
+    --background: url("/../assets/img/button.png") 0 0/100% 100%;
+    width: 70px;
+    border-radius: 65%;
+
+    margin-left: 20px;
+    margin-right: 20px;
+    outline: none;
+    button:focus {
+        outline: 0;
+    }
+    outline: none;
+    box-shadow: none;
+}
+ion-toolbar {
+    --ion-background-color: #300475;
+
+    --ion-toolbar-color: #ffffff;
+    --color: #ffffff;
+}
+.icono {
+    position: relative;
+    margin: auto;
+    margin-top: 10px;
+
+    align-self: center;
+    max-width: 25vw;
+    max-height: 25vh;
+}
+.toastcss {
+    --background: #ffdb22;
+    --color: #ff3f22;
+    --border-style: solid;
+    --border-width: 5px;
+    --border-color: #ff3f22;
+    outline: none;
+    button:focus {
+        outline: 0;
+    }
+}
+form {
+    margin-top: 0.3%;
+    opacity: 1;
+    --ion-item-color: white;
+}
+ion-label {
+    padding-left: 3px;
+    padding-bottom: 3px;
+    align-self: auto;
+    z-index: 1;
+}
+
+.modalSelect {
+    --ion-item-color: white;
+    border-color: #267208;
+}
+.fancy-button {
+    --background: #300475;
+}
+ion-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-size: 20px;
+    --background: linear-gradient(rgba(128, 34, 108, 0.9), rgba(174, 75, 255, 0.9));
+}
+
+ion-item {
+    --background: transparent;
+    margin: 15px;
+}

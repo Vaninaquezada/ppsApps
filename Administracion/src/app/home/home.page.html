@@ -1,0 +1,95 @@
+<ion-header [translucent]="true" [hidden]="scanActive">
+  <ion-toolbar>
+    <ion-title>
+      Ingrese los datos
+
+    </ion-title>
+    <ion-item slot="end" (click)="singOut()">
+      <ion-icon name="enter-outline">
+      </ion-icon>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [style.--background]="scanActive ? '#00000000' :'#f3deff'">
+  <ion-item [hidden]="scanActive">
+
+  </ion-item>
+  <ion-img [src]="fotito" [hidden]="scanActive"></ion-img>
+  <form class="fu" [formGroup]="credentialForm" [hidden]="scanActive">
+    <ion-item>
+      <ion-input placeholder="Nombre" formControlName="nombre" autofocus="true" clearInput="true" value=""></ion-input>
+    </ion-item>
+    <span *ngIf="(credentialForm.get('nombre').dirty || credentialForm.get('nombre').touched) && credentialForm.get('nombre').errors" class="errors">
+      <span *ngIf="credentialForm.get('nombre').errors?.required">El nombre es dato obligatorio.</span>
+      <span *ngIf="credentialForm.get('nombre').errors?.nombre">El nombre es invalido.</span>
+      <span  *ngIf="credentialForm.get('nombre').hasError('pattern')">El nombre solo puede estar compuesto
+        por letras</span>
+    </span>
+
+    <ion-item>
+      <ion-input placeholder="Apellidos" formControlName="apellido" autofocus="true" clearInput="true" value="">
+      </ion-input>
+    </ion-item>
+    <span *ngIf="(credentialForm.get('apellido').dirty || credentialForm.get('apellido').touched) && credentialForm.get('apellido').errors" class="errors">
+      <span *ngIf="credentialForm.get('apellido').errors?.required">El apellido es dato obligatorio.</span>
+      <span *ngIf="credentialForm.get('apellido').errors?.apellido">El apellido es invalido.</span>
+      <span *ngIf="formGroup.get('apellido').hasError('pattern')">El apellido solo puede estar
+        compuesto por letras</span>
+    </span>
+    <ion-item>
+      <ion-input type="number" placeholder="DNI" formControlName="dni" autofocus="true" clearInput="true"></ion-input>
+    </ion-item>
+    <span *ngIf="(credentialForm.get('dni').dirty || credentialForm.get('dni').touched) && credentialForm.get('dni').errors" class="errors">
+      <span *ngIf="credentialForm.get('dni').errors?.required">El DNI es dato obligatorio.</span>
+      <span *ngIf="credentialForm.get('dni').errors?.dni">El DNI es invalido.</span>
+      <span *ngIf="formGroup.get('dni').hasError('maxlength')">El numero de
+        DNI no puede exceder los 8 caracteres </span>
+      <span  *ngIf="credentialForm.get('dni').hasError('pattern')">El DNI tiene que ser numerico</span>
+    </span>
+
+    <ion-item>
+      <ion-input type="email" placeholder="Correo electrónico" formControlName="email" autofocus="true" value="" clearInput="true">
+      </ion-input>
+    </ion-item>
+    <span *ngIf="credentialForm.get('email').touched && credentialForm.get('email').errors?.required">El correo electrónico es dato obligatorio.</span>
+    <span *ngIf="credentialForm.get('email').touched && credentialForm.get('email').errors?.email">El correo electrónico es invalido.</span>
+
+
+    <ion-item>
+      <ion-input placeholder="Contraseña" type="password" formControlName="password" value="" clearInput="true">
+      </ion-input>
+    </ion-item>
+    <span *ngIf="(credentialForm.get('password').dirty || credentialForm.get('password').touched) && credentialForm.get('password').errors" class="errors">
+      <span *ngIf="credentialForm.get('password').errors?.required">La contraseña es requerida</span>
+      <span *ngIf="credentialForm.get('password').errors?.minlength">La contraseña tiene que ser de mínimo 6 caracteres</span>
+    </span>
+
+    <ion-item>
+      <ion-input placeholder="Repita su contraseña" type="password" formControlName="password2" value=""
+        clearInput="true">
+      </ion-input>
+    </ion-item>
+    <span *ngIf="(credentialForm.get('password2').dirty || credentialForm.get('password2').touched) && credentialForm.get('password2').errors" class="errors">
+      <span *ngIf="credentialForm.get('password2').errors?.required">La contraseña es requerida</span>
+      <span *ngIf="credentialForm.get('password2').errors?.minlength">La contraseña tiene que ser de mínimo 6 caracteres</span>
+      <span *ngIf="credentialForm.errors?.mismatch"> La contraseña y la confirmacion de la contraseña no coinciden</span>
+
+    </span>
+  </form>
+  <span [hidden]="scanActive">{{mensajeError}}</span>
+  <ion-button (click)="signUp()" [hidden]="scanActive" expand="full" [disabled]="credentialForm.invalid" >Registrarse</ion-button>
+  <ion-button (click)="irLista()" [hidden]="scanActive" expand="full" color="secondary">Lista de usuarios</ion-button>
+
+
+
+  <ion-button class="qr" (click)="startScanner()" [hidden]="scanActive">
+    <ion-icon name="qr-code-outline"></ion-icon>
+  </ion-button>
+  <ion-button class="camara" [hidden]="scanActive" (click)="cargarImagen()">
+    <ion-icon name="camera"></ion-icon>
+  </ion-button>
+  <ion-button class="scanner-buttons" (click)="stopScanner()" [hidden]="!scanActive">Detener escaneo</ion-button>
+  <div class="scan-box" [hidden]="!scanActive"></div>
+
+</ion-content>
