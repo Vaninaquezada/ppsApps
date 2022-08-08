@@ -1,0 +1,17 @@
+{
+  "appId": "io.ionic.didactica",
+  "appName": "tabla didactica",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "splashImmersive": true,
+      "launchShowDuration": 500,
+      "androidSplashResourceName": "splash",
+      "launchAutoHide": true,
+      "backgroundColor": "#01131b"
+    }
+  },
+  "cordova": {}
+}

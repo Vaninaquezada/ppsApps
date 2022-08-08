@@ -1,0 +1,139 @@
+ion-toolbar {
+  --ion-background-color: rgba(120, 100, 240, 1);
+
+  align-items: center;
+  --ion-toolbar-color: #ffffff;
+}
+
+ion-header {
+  display: inline-block;
+}
+.logOut {
+  color: white;
+}
+ion-content {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  --background: linear-gradient(0deg, rgb(107, 244, 255) 0%, rgba(120, 100, 240, 1) 100%);
+}
+.boton {
+  margin-top: 5%;
+  width: 48%;
+  height: 50%;
+  margin: 1%;
+  border: solid;
+  border-width: 2px;
+  border-color: #002a3e;
+}
+.animales,
+.numeros {
+  max-width: 100%;
+  height: 200px;
+}
+#portugues {
+  height: 40px;
+  background-size: 50px;
+}
+
+#portugues img {
+  height: 40px;
+  margin: 20px;
+  background-size: 50px;
+}
+
+#espanol {
+  height: 40px;
+  background-size: 50px;
+  --background: url("/assets/img/banderitas/argRedonda.png") repeat 5% 5%;
+}
+
+#espanol img {
+  height: 40px;
+
+  background-size: 50px;
+  border-color: black;
+  border: 2px;
+}
+
+#ingles img {
+  height: 40px;
+  background-size: 50px;
+}
+
+#uno {
+  background: red;
+}
+#dos {
+  background: #1fa723; /* Green */
+  color: #002a3e;
+}
+#tres {
+  background-color: pink;
+}
+#cuatro {
+  background-color: black;
+}
+#cinco {
+  background-color: blue;
+}
+#seis {
+  background-color: yellow;
+}
+
+.tema {
+  width: 50px;
+}
+
+.temaButton {
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.gris {
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0.5;
+}
+
+@media screen and (min-device-width: 500px) and (orientation: landscape) {
+  .boton {
+    margin: 0.8%;
+    margin-top: 8%;
+    width: 15%;
+    max-width: 16%;
+    height: 100%;
+    display: inline-block;
+
+    border: solid;
+    border-width: 2px;
+    border-color: #002a3e;
+  }
+  .container {
+    align-items: center;
+    display: inline-block;
+  }
+}
+
+@media (orientation: landscape) {
+  .boton {
+    margin: 0.8%;
+    margin-top: 8%;
+    width: 15%;
+    max-width: 16%;
+    height: 100%;
+    display: inline-block;
+
+    border: solid;
+    border-width: 2px;
+    border-color: #002a3e;
+  }
+  .container {
+    align-items: center;
+    display: inline-block;
+  }
+}

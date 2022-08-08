@@ -1,0 +1,42 @@
+<ion-content>
+  <ion-item class="icono" lines="none">
+    <ion-img src="assets/img/icon.png"></ion-img>
+  </ion-item>
+
+  <form>
+    <ion-item lines="full">
+      <ion-label class="label" position="floating"><span>&nbsp; &nbsp;Correo Electrónico</span></ion-label>
+      <ion-input class="datos" type="text" #email required value={{mail}}> </ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label class="label" position="floating"><span>&nbsp; &nbsp;Clave</span></ion-label>
+      <ion-input class="datos" type="password" #password required value={{pass}}> </ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" (click)="onLogin(email, password)" expand="block">
+          Ingresar</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+  <ion-row>
+    <ion-col>
+      <ion-item class="modalSelect">
+        <ion-label> Seleccione Usuario</ion-label>
+      </ion-item>
+      <ion-item class="blanco">
+        <ion-label>Usuario</ion-label>
+        <ion-select [interfaceOptions]="{cssClass: 'my-class'}" value="seleccione" okText="Seleccionar"
+          [(ngModel)]="valor" cancelText="Cancelar" (ionChange)="onChange(valor)">
+          <ion-select-option value="admin">admin</ion-select-option>
+          <ion-select-option value="invitado">invitado</ion-select-option>
+          <ion-select-option value="anonimo">anonimo</ion-select-option>
+          <ion-select-option value="tester">tester</ion-select-option>
+          <ion-select-option value="usuario">usuario</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+    </ion-col>
+  </ion-row>
+
+</ion-content>

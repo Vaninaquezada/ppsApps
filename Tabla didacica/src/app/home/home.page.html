@@ -1,0 +1,90 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-item slot="end" (click)="singOut()">
+      <ion-icon class="logOut" name="log-out-outline"></ion-icon>
+    </ion-item>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-fab horizontal="start" vertical="top" slot="fixed" edge>
+    <ion-fab-button>
+      <img *ngIf="espanol" src="/assets/img/banderitas/argRedonda.png">
+      <img *ngIf="ingles" src="/assets/img/banderitas/IngRedonda.png">
+      <img *ngIf="portugues" src="/assets/img/banderitas/braRedonda.png">
+    </ion-fab-button>
+    <ion-fab-list>
+
+      <ion-fab-button color="light" (click)="onClickE()" id="espanol">
+        <img [ngClass]="{gris: !espanol}" src="/assets/img/banderitas/argRedonda.png">
+      </ion-fab-button>
+      <ion-fab-button color="light" id="ingles" (click)="onClickI()">
+        <img [ngClass]="{gris: !ingles}" src="/assets/img/banderitas/IngRedonda.png">
+      </ion-fab-button>
+      <ion-fab-button color="light" id="portugues" (click)="onClickP()">
+        <img [ngClass]="{gris: !portugues}" src="/assets/img/banderitas/braRedonda.png">
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <div id="container">
+
+
+
+    <button class="boton" id="uno" (click)="onClick1()">
+      <img class="animales" *ngIf="animal" src="/assets/img/animales/oveja.png">
+      <img class="numeros" *ngIf="numero" src="/assets/img/numeros/uno.png">
+      <img class="numeros" *ngIf="color" src="/assets/img/fondoColores.png">
+    </button>
+    <button class="boton" id="dos" (click)="onClick2()">
+      <img class="animales" *ngIf="animal" src="/assets/img/animales/raton.png">
+      <img class="numeros" *ngIf="numero" src="/assets/img/numeros/dos.png">
+      <img class="numeros" *ngIf="color" src="/assets/img/fondoColores.png">
+    </button>
+    <button class="boton" id="tres" (click)="onClick3()">
+      <img class="animales" *ngIf="animal" src="/assets/img/animales/gato.png">
+      <img class="numeros" *ngIf="numero" src="/assets/img/numeros/tres.png">
+      <img class="numeros" *ngIf="color" src="/assets/img/fondoColores.png">
+    </button>
+    <button class="boton" id="cuatro" (click)="onClick4()">
+      <img class="animales" *ngIf="animal" src="/assets/img/animales/caballo.png">
+      <img class="numeros" *ngIf="numero" src="/assets/img/numeros/cuatro.png">
+      <img class="numeros" *ngIf="color" src="/assets/img/fondoColores.png">
+    </button>
+    <button class="boton" id="cinco" (click)="onClick5()">
+      <img class="animales" *ngIf="animal" src="/assets/img/animales/perro.png">
+      <img class="numeros" *ngIf="numero" src="/assets/img/numeros/cinco.png">
+      <img class="numeros" *ngIf="color" src="/assets/img/fondoColores.png">
+    </button>
+    <button class="boton" id="seis" (click)="onClick6()">
+      <img class="animales" *ngIf="animal" src="/assets/img/animales/conejo.png">
+      <img class="numeros" *ngIf="numero" src="/assets/img/numeros/seis.png">
+      <img class="numeros" *ngIf="color" src="/assets/img/fondoColores.png">
+    </button>
+  </div>
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="light">
+      <img *ngIf="color" src="/assets/img/colores.png">
+      <img *ngIf="animal" src="/assets/img/animales.png">
+      <img *ngIf="numero" src="/assets/img/numeros.png">
+
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button color="light" id="animales" (click)="onClickA()">
+        <img *ngIf="animal" class="tema" src="/assets/img/animales.png">
+        <img class="tema" *ngIf="!animal" src="/assets/img/animales2.png">
+      </ion-fab-button>
+      <ion-fab-button color="light" id="colores" (click)="onClickC()">
+        <img class="tema" *ngIf="color" src="/assets/img/colores.png">
+        <img class="tema" *ngIf="!color" src="/assets/img/colores2.png">
+      </ion-fab-button>
+      <ion-fab-button color="light" id="numeros" (click)="onClickN()">
+        <img class="tema" *ngIf="numero" src="/assets/img/numeros.png">
+        <img class="tema" *ngIf="!numero" src="/assets/img/numeros2.png">
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>
